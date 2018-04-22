@@ -2,37 +2,26 @@ public class Main {
 
     public static void main(String[] args) {
 
-
-        Student stud1 = new Student("Samuel Suder", "12345678");
-        Student stud2 = new Student("Jan Kowalski", "23456789");
-
-        Wykladowca wykl1 = new Wykladowca("Maria Nowak", "01234567890");
-        Wykladowca wykl2 = new Wykladowca("Antoni Antoni", "13579246802");
+        Student student = new Student("Samuel Suder", "12345678", "student", 6);
+        Student student1 = new Student("Jacek Kowalski", "34234234","student",7);
+        Wykladowca wykladowca = new Wykladowca("Jan Nowak", "1235353", "wykladowca", 5);
 
 
-        Przedmiot FIL = new Przedmiot("Filozofia");
-        Przedmiot SOC = new Przedmiot("Socjologia");
 
-        wykl1.dodaj(FIL);
-        wykl1.dodaj(SOC);
-        wykl2.dodaj(FIL);
-
-        stud1.dodaj(FIL);
-        stud1.dodaj(SOC);
-        stud2.dodaj(FIL);
-        stud1.dodaj(SOC);
+        Przedmiot przedmiot1 = new Przedmiot("Filozofia");
+        wykladowca.dodaj(przedmiot1);
+        student.dodaj(przedmiot1);
+        student1.dodaj(przedmiot1);
+        wykladowca.ocen(przedmiot1, student, 5);
+        wykladowca.ocen(przedmiot1, student1, 3);
+        //Przedmiot SOC = new Przedmiot("Socjologia");
 
 
-        wykl1.oceny(FIL, stud1, 5);
-
-        wykl1.oceny(SOC, stud1, 3);
-        wykl1.oceny(SOC, stud2, 5);
+// yu dalej idą jakiś method nie wiem dlaczego, ale stłożułem methody żeby mogna było startować main
 
 
-        System.out.println("Srednia: " + stud1.srednia());
+        System.out.println("Srednia: " + student.srednia());
         System.out.println("Lista studentów - Filozofia:");
-        FIL.listStud();
-        System.out.println("Lista wykladowcow:");
-        FIL.listWykl();
+        przedmiot1.listStud();
     }
 }

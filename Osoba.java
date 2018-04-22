@@ -4,29 +4,33 @@ public class Osoba {
     private String nazwisko;
     private String pesel;
     private String rola;
-    public double oceny;
+    private int id;
 
 
-    public Osoba(String nazwisko, String pesel, String rola, double oceny) {
+
+    public Osoba(String nazwisko, String pesel, String rola, int id) {
         this.nazwisko = nazwisko;
         this.pesel = pesel;
         this.rola = rola;
-        this.oceny = oceny;
+        this.id = id;
 
     }
-    String setNazwisko()   {
+
+    String getNazwisko() {
+
         return nazwisko;
     }
-    String setPesel()       {
+
+    String getPesel() {
+
         return pesel;
     }
-    double setOcena()       {
-        if(rola==Wykladowca.wykladowca)   {
 
-            return oceny;
+    String getRola() {
+        return rola;
+    }
 
-        }
-
-        return 0;
+    int getId() {
+    return id;
     }
 }

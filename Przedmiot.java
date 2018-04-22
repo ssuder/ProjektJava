@@ -5,8 +5,8 @@ class Przedmiot {
     static int ilosc;
     String nazwa;
 
-    ArrayList<Wykladowca> wykladowcy = new ArrayList<Wykladowca>();
-    ArrayList<Student> studenci = new ArrayList<Student>();
+    ArrayList<Wykladowca> wykladowcy = new ArrayList<>();
+    ArrayList<Student> studenci = new ArrayList<>();
 
 
     public Przedmiot(String nazwa)
@@ -15,4 +15,20 @@ class Przedmiot {
         nr_przed = ilosc;
         this.nazwa = nazwa;
     }
+
+    public void dodajStudenta(Student student) {
+        studenci.add(student);
+    }
+
+    public void usunStudenta(Student student) {
+        studenci.remove(student);
+    }
+
+    public void listStud() {
+
+            for (int i=0; i!=studenci.size(); i++){
+                System.out.println("ID:" + studenci.get(i).getId() + " - " + studenci.get(i).getNazwisko());
+            }
+    }
+
 }

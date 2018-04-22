@@ -1,8 +1,11 @@
 class Oceny {
-    double wykl, asys;
+    double wykl;
 
     public Oceny(double wykl) {
         this.wykl = wykl;
+    }
+
+    public Oceny(double ocenaWyk, double i) {
     }
 
     public double getOcenaWyk() {
